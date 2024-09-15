@@ -1,0 +1,44 @@
+.navbar{
+    height: 100px;
+    .wrapper{
+        max-width: 1366px;
+        margin: 15%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        span{
+            font-weight: bold;
+        }
+        .social{
+            display: flex;
+            gap: 5vh;
+            #linkedin{
+                font-size: 200%;
+            }
+            #linkedin:hover{
+                color: #0077B5;
+                cursor: pointer;
+                transition: 0.4s;
+            }
+            #insta{
+                font-size: 200%;
+            }
+            #insta:hover{
+                cursor: pointer;
+                color: rgb(209, 40, 40);
+                transition: 0.4s;
+
+            }
+            #github{
+                font-size: 200%;
+            }
+            #github:hover{
+                color: #6e5494;
+                cursor: pointer;
+                transition: 0.4s;
+                
+            }
+        }
+    }
+}
