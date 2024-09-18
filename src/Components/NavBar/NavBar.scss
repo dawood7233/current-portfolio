@@ -8,8 +8,10 @@
         justify-content: space-between;
         align-items: center;
         height: 100%;
-        span{
-            font-weight: bold;
+        img{
+            height: 40%;
+            width: 11%;
+            cursor: pointer;
         }
         .social{
             display: flex;

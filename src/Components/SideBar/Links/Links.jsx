@@ -1,16 +1,41 @@
 import React from "react";
+import {motion} from "framer-motion"
+
+const variants = {
+  open:{
+    transition :{
+      staggerChildren: 0.1,
+    },
+  },
+  close:{
+    transition :{
+      staggerChildren: 0.05,
+      staggerDirection: -1,
+    },
+  }
+}
+const itemVariants = {
+  open:{
+    y : 0,
+    opacity: 1,
+  },
+  close:{
+    y:50,
+    opacity: 0,
+  }
+}
 
 const Links = () => {
   const items = ["HomePage", "Sevices", "Portfolio", "Contact", "About"];
 
   return (
-    <div className="links">
+    <motion.div className="links" variants={variants}>
       {items.map((items) => (
-        <a href={`#${items}`} key={items}>
+        <motion.a href={`#${items}`} key={items} variants = {itemVariants} whileHover={{scale:1.1}} whileTap={{scale:0.95}}>
           {items}
-        </a>
+        </motion.a>
       ))}
-    </div>
+    </motion.div>
   );
 };
 
