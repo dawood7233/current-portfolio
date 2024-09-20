@@ -3,6 +3,7 @@ import NavBar from "./Components/NavBar/NavBar";
 import IntroPage from "./Components/introPage/IntroPage"
 import Parallax from "./Components/Parallax/Parallax";
 import Services from "./Components/Services/Services";
+import Portfolio from "./Components/Portfolio/Portfolio";
 
 
 const App = () => {
@@ -15,10 +16,8 @@ const App = () => {
       <section><Parallax type = "services"/></section>
       <section id="Services"><Services/></section>
       <section><Parallax type = "portfolio"/></section>
-      <section id="Portfolio">Portfolio1</section>
-      <section>Portfolio2</section>
-      <section>Portfolio3</section>
-      <section id="Contact">Contact</section>
+      <section id="Portfolio"><Portfolio/></section>
+      {/* <section id="Contact">Contact</section> */}
     </div>
   );
 };
