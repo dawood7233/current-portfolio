@@ -1,6 +1,7 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./Contact.scss";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 const variants = {
   initial: {
@@ -19,6 +20,25 @@ const variants = {
 
 const Contact = () => {
   const formRef = useRef();
+  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_8mdr3hr", "template_ozfwyed", formRef.current, {
+        publicKey: "argc4FElDfBOf15Ym",
+      })
+      .then(
+        (result) => {
+          setSuccess(true);
+        },
+        (error) => {
+          setError(true);
+        }
+      );
+  };
 
   return (
     <motion.div
@@ -50,7 +70,7 @@ const Contact = () => {
           initial={{ opacity: 1 }}
           whileInView={{ opacity: 0 }}
           transition={{ delay: 2, duration: 0.5 }}
-          style={{ pointerEvents: "none", zIndex: 1 }} // Disable pointer events after animation
+          style={{ pointerEvents: "none", zIndex: 1 }}
         >
           <svg width="450px" height="450px" viewBox="0 0 32.666 32.666">
             <motion.path
@@ -77,31 +97,35 @@ const Contact = () => {
         </motion.div>
 
         <motion.div
-          ref={formRef}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 4, duration: 1 }}
-          style={{ pointerEvents: "auto", zIndex: 2 }} // Ensure the form is above the SVG
+          style={{ pointerEvents: "auto", zIndex: 2 }}
         >
-          <form>
+          <form ref={formRef} onSubmit={sendEmail}>
             <input
               type="text"
               required
               placeholder="Name"
-              style={{ pointerEvents: "auto" }} // Ensure each input is interactive
+              name="name"
+              style={{ pointerEvents: "auto" }}
             />
             <input
               type="text"
               required
               placeholder="Email"
+              name="email"
               style={{ pointerEvents: "auto" }}
             />
             <textarea
               rows={8}
               placeholder="Message"
+              name="message"
               style={{ pointerEvents: "auto" }}
             />
             <button>Submit</button>
+            {error && "Error"}
+            {success && "Success"}
           </form>
         </motion.div>
       </div>
