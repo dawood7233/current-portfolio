@@ -1,74 +1,71 @@
-.portfolio{
-    position: relative;
+.portfolio {
+  position: relative;
 
-    .progress{
-        position: sticky;
-        top: 0;
-        left: 0;
-        padding-top: 50px;
-        text-align: center;
-        color: #e1b62f;
-        font-size: 36px;
+  .progress {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+    text-align: center;
+    color: #e1b62f;
+    font-size: 36px;
 
-
-        .progressBar{
-            height: 5px;
-            background-color: white;
-        }
+    .progressBar {
+      height: 5px;
+      background-color: white;
     }
-    .container{
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .wrapper {
+      max-width: 1366px;
+      height: 100%;
+      margin: 10%;
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      justify-content: center;
+
+      .imageContainer {
+        flex: 1;
+        height: 50%;
+
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .textContainer {
+        flex: 1;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
+        flex-direction: column;
+        gap: 30px;
 
-        .wrapper{
-            max-width: 1366px;
-            height: 100%;
-            margin: 10%;
-            display: flex;
-            gap: 50px;
-            align-items: center;
-            justify-content: center;
-
-            
-            .imageContainer{
-                flex: 1;
-                height: 50%;
-
-                img{
-                    object-fit: cover;
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-            
-            .textContainer{
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-                gap: 30px;
-
-                h2{
-                    font-size: 50px;
-                }
-
-                p{
-                    font-size: 20px;
-                }
-
-                button{
-                    background-color: #e1b62f;
-                    border: none;
-                    border-radius: 10px;
-                    height: 35px;
-                    cursor: pointer;
-                    font-size: 20px;
-                }
-            }
-
+        h2 {
+          font-size: 50px;
         }
+
+        p {
+          font-size: 20px;
+        }
+
+        button {
+          background-color: #e1b62f;
+          border: none;
+          border-radius: 10px;
+          height: 35px;
+          cursor: pointer;
+          font-size: 20px;
+        }
+      }
     }
+  }
 }

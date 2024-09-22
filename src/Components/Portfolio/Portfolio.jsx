@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import "./portfolio.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
-const items = [
+const itemsP = [
   {
     id: 1,
     title: "Personal Portfolio",
@@ -79,7 +79,7 @@ const Portfolio = () => {
           className="progressBar"
         ></motion.div>
       </div>
-      {items.map((item) => (
+      {itemsP.map((item) => (
         <Single item={item} key={item.id} />
       ))}
     </div>
