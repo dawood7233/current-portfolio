@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .contactMain{
     height: 100%;
     max-width: 1366px;
@@ -6,15 +8,39 @@
     align-items: center;
     gap: 50px;
 
+    @include mobile {
+        width: 140%;
+        height: 230%;
+        padding: 10px;
+        margin-top: -40%;
+        flex-direction: column;
+      }
+      // @include tablet{
+      //   width: 180%;
+      //   height: fit-content;
+      //   margin-top: -20%;
+      // }
     .textContainer{
         flex: 1;
         display: flex;
         flex-direction: column;
         gap: 40px;
 
+        @include mobile {
+            gap: 20px;
+            text-align: center;
+            align-items: center;
+            // margin-top: 70px;
+          }
+
         h1{
             font-size: 60px;
             line-height: 75px;
+
+            @include mobile {
+                font-size: 36px;
+              }
+        
         }
         span{
             font-weight: 300;
@@ -24,6 +50,16 @@
     .formContainer{
         flex: 1;
         position: relative;
+
+        @include mobile {
+            padding: 50px;
+            width: 100%;
+            margin-top: -250%;
+          }
+          // @include tablet{
+          //   margin-top: 0;
+          // }
+      
 
         .phoneSvg{
             stroke: #e1b62f;
@@ -43,6 +79,10 @@
                 border: 1px solid white;
                 color: white;
                 border-radius: 10px;
+
+                @include mobile {
+                    padding: 10px;
+                  }
             }
             button{
                 cursor:pointer;
@@ -51,6 +91,10 @@
                 padding: 8px;
                 font-size: large;
                 border: none;
+
+                @include mobile {
+                    padding: 10px;
+                  }
             }
         }
     }

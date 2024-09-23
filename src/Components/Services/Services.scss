@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .services {
     background: linear-gradient(180deg, #000000, #1c1c23);
     height: 120%;
@@ -5,6 +7,12 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center; 
+    @include mobile {
+      width: 160%;
+    }
+    // @include tablet{
+    //   width: 180%;
+    // }
   
     .textContainer {
       flex: 1;
@@ -12,6 +20,12 @@
       display: flex;
       align-items: center;
       gap: 20px;
+
+      @include mobile {
+        align-self: center;
+        text-align: center;
+        flex-direction: column;
+      }
   
       p {
         font-weight: 200;
@@ -24,6 +38,10 @@
         width: 200px;
         border: none;
         border-top: 0.5px solid gray;
+        @include mobile {
+          width: 300px;
+        }
+  
       }
     }
   
@@ -31,14 +49,30 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      @include mobile {
+        width: 100%;
+        margin-top: -30%;
+      }
   
       .title {
         display: flex;
         gap: 10px;
+
+        @include mobile {
+          flex-direction: column;
+          text-align: center;
+          gap: 20px;
+        }
+  
   
         h1 {
           font-size: 50px;
           font-weight: 100;
+
+          @include mobile {
+            font-size: 36px;
+          }
           b:hover{
             color: #e1b62f;
             cursor: pointer;
@@ -53,7 +87,12 @@
       max-width: 1366px;
       margin: 10%;
       justify-content: space-between;
-  
+
+      @include mobile {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 30%;
+      }
       .box {
         flex: 1;
         display: flex;
@@ -66,6 +105,17 @@
         border-radius: 20px;
         margin-top: -90px; 
         margin-left: 20px;
+
+        @include mobile {
+          border: none;
+          align-items: center;
+          gap: 0;
+          padding: 10px;
+          margin-bottom: 27%;
+        }
+        // @include tablet{
+        //   height: 80%
+        // }
   
         h2 {
           margin-bottom: 20px;
@@ -75,6 +125,11 @@
         p {
           flex-grow: 1;
           margin-bottom: 10px;
+
+          
+            @include mobile {
+              display: none;
+            }
         }
   
         button {
@@ -86,6 +141,15 @@
           cursor: pointer;
           align-self: center; 
           margin-top: auto; 
+
+          @include mobile {
+            background-color: transparent;
+            border: 1px solid #e1b62f;
+            border-radius: 10px;
+            color: #e1b62f;
+            width: 50%;
+            padding: 5px;
+          }
         }
       }
     }

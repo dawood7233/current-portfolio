@@ -14,8 +14,9 @@ const App = () => {
     <>
       <Cursor/>
       <section id="HomePage">
-        <NavBar />
+      <NavBar />
         <IntroPage/>
+        
       </section>
       <section><Parallax type = "services"/></section>
       <section id="Services"><Services/></section>

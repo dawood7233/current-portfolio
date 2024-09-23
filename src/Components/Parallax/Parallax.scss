@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .parallax{
     height: 100%;
     width: 100%;
@@ -5,10 +7,28 @@
     display: flex;
     justify-content: center;
     overflow: hidden;
+    @include mobile {
+       width: 160%;
+       overflow: hidden;
+
+      }
+      // @include tablet{
+      //   width: 180%;
+      // }
 
     h1{
         font-size: 100px;
         padding-top: 8%;
+
+        @include mobile {
+            font-size: 72px;
+            text-align: center;
+            margin-top: 30%;
+
+          }
+          // @include tablet{
+          //   margin-top: 10%;
+          // }
     }
 
     .desert{
@@ -19,6 +39,12 @@
         position: absolute;
         height: 100%;
         z-index: 3;
+
+        @include mobile {
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+      
     }
     .moon{
         background-image: url("moon.png");
@@ -29,6 +55,14 @@
         margin-top: 10%;
         z-index: 2;
         margin-left: 100%;
+
+        @include mobile {
+            background-size: 200%;
+            background-repeat: no-repeat;
+            margin-top: 50%;
+
+          }
+      
     }
     .stars{
         background-image: url("stars.png");

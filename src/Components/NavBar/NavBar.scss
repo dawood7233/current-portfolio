@@ -1,52 +1,93 @@
-.navbar{
-    height: 100px;
-    .wrapper{
-        max-width: 1366px;
-        margin: 15%;
-        margin-top: auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-        img{
-            height: 40%;
-            width: 11%;
-            cursor: pointer;
-        }
-        .social{
-            display: flex;
-            gap: 5vh;
-            #linkedin{
-                font-size: 200%;
-            }
-            #linkedin:hover{
-                color: #0077B5;
-                cursor: pointer;
-                transition: 0.4s;
-                transform: translateY(-10px);
+@import "../../app.scss";
 
-            }
-            #insta{
-                font-size: 200%;
-            }
-            #insta:hover{
-                cursor: pointer;
-                color: rgb(209, 40, 40);
-                transition: 0.4s;
-                transform: translateY(-10px);
+.navbar {
+  height: 100px;
 
+  // @include tablet{
+  //   width: 180%;
+  // }
 
-            }
-            #github{
-                font-size: 200%;
-            }
-            #github:hover{
-                color: #6e5494;
-                cursor: pointer;
-                transition: 0.4s;
-                transform: translateY(-10px);
+  .sidebar-container {
+    // @include tablet {
+    //   display: none;
+    // }
+    // @include desktop {
+    //   display: none;
+    // }
+  }
+  .wrapper {
+    max-width: 1366px;
+    margin: 15%;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
 
-            }
-        }
+    @include mobile {
+      justify-content: flex-end;
+      padding: 20px;
+      width: 120%;
     }
+
+    .list {
+      ul {
+        display: flex;
+        flex-direction: row;
+        li {
+          padding-right: 50px;
+          list-style: none;
+          font-size: 20px;
+          @include mobile {
+            display: none;
+          }
+          // @include tablet{
+          //   font-size: 30px;
+          // }
+        }
+      }
+    }
+    img {
+      height: 40%;
+      width: 11%;
+      cursor: pointer;
+      @include mobile {
+        display: none;
+      }
+      @include tablet {
+        display: none;
+      }
+    }
+    .social {
+      display: flex;
+      gap: 5vh;
+      #linkedin {
+        font-size: 200%;
+      }
+      #linkedin:hover {
+        color: #0077b5;
+        cursor: pointer;
+        transition: 0.4s;
+        transform: translateY(-10px);
+      }
+      #insta {
+        font-size: 200%;
+      }
+      #insta:hover {
+        cursor: pointer;
+        color: rgb(209, 40, 40);
+        transition: 0.4s;
+        transform: translateY(-10px);
+      }
+      #github {
+        font-size: 200%;
+      }
+      #github:hover {
+        color: #6e5494;
+        cursor: pointer;
+        transition: 0.4s;
+        transform: translateY(-10px);
+      }
+    }
+  }
 }

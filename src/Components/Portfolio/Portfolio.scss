@@ -1,5 +1,16 @@
+@import "../../app.scss";
+
 .portfolio {
   position: relative;
+
+  @include mobile {
+    margin-top: -170%;
+    width: 160%;
+    overflow:hidden;
+  }
+  // @include tablet{
+  //   width: 180%;
+  // }
 
   .progress {
     position: sticky;
@@ -9,6 +20,11 @@
     text-align: center;
     color: #e1b62f;
     font-size: 36px;
+
+    @include mobile {
+      padding-top: calc(100vh - 100px);
+      font-size: 24px;
+    }
 
     .progressBar {
       height: 5px;
@@ -27,19 +43,45 @@
       max-width: 1366px;
       height: 100%;
       margin: 10%;
+      margin-left: 3%;
       display: flex;
-      gap: 50px;
+      gap: 120px;
       align-items: center;
       justify-content: center;
+
+      @include mobile {
+        flex-direction: column;
+      }
+      // @include tablet {
+      //   flex-direction: column;
+      // }
 
       .imageContainer {
         flex: 1;
         height: 50%;
+        // margin-right: 90px;
+        @include mobile {
+          width: 100%;
+          max-height: 300px;
+          margin-right: 10%;
+          margin-top: 5%;
+        }
+
 
         img {
           object-fit: cover;
           width: 120%;
           height: 100%;
+          
+          
+          @include mobile {
+            object-fit: contain;
+          }
+          // @include tablet{
+          //   object-fit: contain;
+          //   margin-left: -5%;
+          // }
+
         }
       }
 
@@ -49,12 +91,41 @@
         flex-direction: column;
         gap: 30px;
 
+        @include mobile {
+          transform: none !important;
+          padding: 10px;
+          align-items: center;
+          text-align: center;
+          margin-top: -40%;
+          padding-left: 40px;
+          justify-content: center;
+        }
+        // @include tablet{
+        //   justify-content: center;
+        //   align-items: center;
+        // }
+
         h2 {
           font-size: 50px;
+
+          @include mobile {
+            font-size: 36px;
+          }
+          // @include tablet{
+          //   padding-left: 12%
+          // }
+
         }
 
         p {
           font-size: 20px;
+
+          @include mobile {
+            font-size: 16px;
+          }
+          // @include tablet{
+          //   padding-left: 13%;
+          // }
         }
 
         button {
@@ -64,6 +135,17 @@
           height: 35px;
           cursor: pointer;
           font-size: 20px;
+
+          @include mobile {
+            width: 100%;
+            border: none;
+            border-radius: 20px;
+          }
+          // @include tablet{
+          //   margin-left: 13%;
+          //   width: 80%;
+          //   height: 12%;
+          // }
         }
       }
     }
