@@ -9,6 +9,7 @@ const itemsP = [
     img: "./personalPortfolio.png",
     description:
       "Developed a dynamic personal portfolio using React.js for a smooth, responsive user experience and SCSS for modern, modular styling. The portfolio showcases my skills, projects, and professional journey, integrated with animated transitions and a clean, minimalist design to reflect a professional yet creative approach.",
+    link: "https://github.com/dawood7233/my-portfolio"
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ const itemsP = [
     img: "./e-commerce.png",
     description:
       "MegaMart is an e-commerce website developed using simple HTML, CSS, and JavaScript. The project focuses on providing a clean and intuitive user interface for online shopping. It includes features such as product listings, shopping cart functionality, and responsive design, ensuring a seamless experience across devices.",
+      link: "https://github.com/dawood7233/MegaMart"
   },
   {
     id: 3,
@@ -23,13 +25,15 @@ const itemsP = [
     img: "./VitalFit.png",
     description:
       "VitalFit is a fitness-focused website designed to help users track their fitness journey. Built using simple HTML, CSS, and JavaScript, the site features a user-friendly interface with workout tracking, health tips, and progress monitoring tools. The responsive design ensures accessibility across devices, making it easy for users to stay on top of their fitness goals.",
+      link: "https://github.com/dawood7233/VitalFit"
   },
   {
     id: 4,
-    title: "Guess Number",
-    img: "",
+    title: "CourseCraft",
+    img: "./CourseCraft.png",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "CourseCraft is an innovative online learning platform designed to offer a wide range of courses to help individuals develop new skills and enhance their knowledge. Built using modern web technologies like HTML, CSS, and JavaScript, CourseCraft provides an intuitive and responsive interface, ensuring a seamless learning experience across all devices.",
+      link: "https://github.com/dawood7233/CourseCraft"
   },
 ];
 const Single = ({ item }) => {
@@ -51,7 +55,15 @@ const Single = ({ item }) => {
           <motion.div className="textContainer" style={{y}}>
             <h2>{item.title}</h2>
             <p>{item.description}</p>
-            <button>See Demo</button>
+            
+            <a
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button"
+            >
+              See Demo
+            </a>
           </motion.div>
         </div>
       </div>

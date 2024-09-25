@@ -7,28 +7,28 @@
     display: flex;
     justify-content: center;
     overflow: hidden;
+    @include tablet{
+      width: 180%;
+    }
     @include mobile {
        width: 160%;
        overflow: hidden;
-
       }
-      // @include tablet{
-      //   width: 180%;
-      // }
+
 
     h1{
         font-size: 100px;
         padding-top: 8%;
 
+        @include tablet{
+          margin-top: 10%;
+        }
         @include mobile {
             font-size: 72px;
             text-align: center;
             margin-top: 30%;
 
           }
-          // @include tablet{
-          //   margin-top: 10%;
-          // }
     }
 
     .desert{

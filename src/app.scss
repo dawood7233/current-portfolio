@@ -1,18 +1,31 @@
-@mixin mobile{
-    @media(max-width:738px){
+@mixin small-screen {
+    @media (max-width: 540px) and (max-height: 720px) {
+      @content;
+    }
+  }
+
+// Mobile: Up to 738px
+
+@mixin mobile {
+    @media (max-width: 738px) {
         @content;
     }
 }
-@mixin tablet{
-    @media(max-width:1024px){
+
+// Tablet: From 739px to 1024px
+@mixin tablet {
+    @media (min-width: 739px) and (max-width: 1024px) {
         @content;
     }
 }
-@mixin desktop{
-    @media(max-width:1366px){
+
+// Desktop: 1025px and up
+@mixin desktop {
+    @media (min-width: 1025px) {
         @content;
     }
 }
+
 *{
     padding: 0;
     margin: 0;
@@ -35,7 +48,6 @@ html{
 section{
     height: 100vh;
     scroll-snap-align: center;
-
 }
 #Portfolio{
     height: 0%;      

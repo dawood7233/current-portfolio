@@ -8,6 +8,11 @@
     align-items: center;
     gap: 50px;
 
+    @include tablet{
+      width: 160%;
+      height: fit-content;
+      margin-top: -20%;
+    }
     @include mobile {
         width: 140%;
         height: 230%;
@@ -15,11 +20,9 @@
         margin-top: -40%;
         flex-direction: column;
       }
-      // @include tablet{
-      //   width: 180%;
-      //   height: fit-content;
-      //   margin-top: -20%;
-      // }
+      @include small-screen{
+        margin-top: auto;
+      }
     .textContainer{
         flex: 1;
         display: flex;
@@ -31,6 +34,9 @@
             text-align: center;
             align-items: center;
             // margin-top: 70px;
+          }
+          @include small-screen{
+            margin-bottom: -120%;
           }
 
         h1{
@@ -51,14 +57,17 @@
         flex: 1;
         position: relative;
 
+        @include tablet{
+          margin-top: 0;
+        }
         @include mobile {
             padding: 50px;
             width: 100%;
             margin-top: -250%;
           }
-          // @include tablet{
-          //   margin-top: 0;
-          // }
+          @include small-screen{
+            margin-top: auto;
+          }
       
 
         .phoneSvg{

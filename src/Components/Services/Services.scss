@@ -10,10 +10,9 @@
     @include mobile {
       width: 160%;
     }
-    // @include tablet{
-    //   width: 180%;
-    // }
-  
+    @include tablet{
+      width: 180%;
+    }
     .textContainer {
       flex: 1;
       align-self: flex-end;
@@ -53,6 +52,10 @@
       @include mobile {
         width: 100%;
         margin-top: -30%;
+      }
+      @include small-screen{
+        margin-top: 5%;
+      
       }
   
       .title {
@@ -106,6 +109,9 @@
         margin-top: -90px; 
         margin-left: 20px;
 
+        @include tablet{
+          height: 80%
+        }
         @include mobile {
           border: none;
           align-items: center;
@@ -113,9 +119,9 @@
           padding: 10px;
           margin-bottom: 27%;
         }
-        // @include tablet{
-        //   height: 80%
-        // }
+        @include small-screen{
+          margin-top: -22%;
+        }
   
         h2 {
           margin-bottom: 20px;

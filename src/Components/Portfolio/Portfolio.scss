@@ -3,14 +3,18 @@
 .portfolio {
   position: relative;
 
+  @include tablet{
+    width: 180%;
+  }
   @include mobile {
     margin-top: -170%;
     width: 160%;
     overflow:hidden;
   }
-  // @include tablet{
-  //   width: 180%;
-  // }
+  @include small-screen{
+    margin-top: auto; 
+  }
+
 
   .progress {
     position: sticky;
@@ -24,6 +28,9 @@
     @include mobile {
       padding-top: calc(100vh - 100px);
       font-size: 24px;
+    }
+    @include small-screen{
+      padding-top: 15%;
     }
 
     .progressBar {
@@ -49,12 +56,12 @@
       align-items: center;
       justify-content: center;
 
+      @include tablet {
+        flex-direction: column;
+      }
       @include mobile {
         flex-direction: column;
       }
-      // @include tablet {
-      //   flex-direction: column;
-      // }
 
       .imageContainer {
         flex: 1;
@@ -74,13 +81,13 @@
           height: 100%;
           
           
+          @include tablet{
+            object-fit: contain;
+            margin-left: -5%;
+          }
           @include mobile {
             object-fit: contain;
           }
-          // @include tablet{
-          //   object-fit: contain;
-          //   margin-left: -5%;
-          // }
 
         }
       }
@@ -90,7 +97,11 @@
         display: flex;
         flex-direction: column;
         gap: 30px;
-
+        
+        @include tablet{
+          justify-content: center;
+          align-items: center;
+        }
         @include mobile {
           transform: none !important;
           padding: 10px;
@@ -100,52 +111,53 @@
           padding-left: 40px;
           justify-content: center;
         }
-        // @include tablet{
-        //   justify-content: center;
-        //   align-items: center;
-        // }
 
         h2 {
           font-size: 50px;
 
+          @include tablet{
+            padding-left: 12%
+          }
           @include mobile {
             font-size: 36px;
           }
-          // @include tablet{
-          //   padding-left: 12%
-          // }
+          @include small-screen{
+            padding-top: 10%;
+          }
 
         }
 
         p {
           font-size: 20px;
 
+          @include tablet{
+            padding-left: 13%;
+          }
           @include mobile {
             font-size: 16px;
           }
-          // @include tablet{
-          //   padding-left: 13%;
-          // }
         }
 
-        button {
+        .button {
           background-color: #e1b62f;
           border: none;
           border-radius: 10px;
           height: 35px;
           cursor: pointer;
           font-size: 20px;
+          text-align: center;
+          color: black;
 
+          @include tablet{
+            margin-left: 13%;
+            width: 80%;
+            height: 12%;
+          }
           @include mobile {
             width: 100%;
             border: none;
             border-radius: 20px;
           }
-          // @include tablet{
-          //   margin-left: 13%;
-          //   width: 80%;
-          //   height: 12%;
-          // }
         }
       }
     }

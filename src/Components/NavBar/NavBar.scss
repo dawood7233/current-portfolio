@@ -3,17 +3,20 @@
 .navbar {
   height: 100px;
 
-  // @include tablet{
-  //   width: 180%;
-  // }
+  @include tablet{
+    width: 180%;
+  }
 
   .sidebar-container {
-    // @include tablet {
-    //   display: none;
-    // }
-    // @include desktop {
-    //   display: none;
-    // }
+    @include desktop {
+      display: none;
+    }
+    @include tablet {
+      display: none;
+    }
+    @include mobile {
+      display: block;
+    }
   }
   .wrapper {
     max-width: 1366px;
