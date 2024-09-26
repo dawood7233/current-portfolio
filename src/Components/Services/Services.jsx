@@ -41,17 +41,17 @@ const Services = () => {
             <motion.div className="box"whileHover={{background: "lightgrey", color: "black"}}>
                 <h2>Full-Stack Web Development </h2>
                 <p>I build dynamic web applications using the MERN stack (MongoDB, Express, React, Node.js), offering end-to-end solutions from intuitive front-ends to scalable back-ends.</p>
-                <button>Get Services</button>
+                <button><a href="https://www.fiverr.com/dawood098765" target='_blank'>Get Services</a></button>
             </motion.div>
             <motion.div className="box"whileHover={{background: "lightgrey", color: "black"}}>
                 <h2>Graphic Designing</h2>
                 <p>I provide professional graphic design services, including branding, UI/UX design, and marketing materials. My experience with tools like Adobe Photoshop, Illustrator, and Canva ensures visually appealing designs that align with your brand identity.</p>
-                <button>Get Services</button>
+                <button><a href="https://www.fiverr.com/dawood098765" target='_blank'>Get Services</a></button>
             </motion.div> 
             <motion.div className="box"whileHover={{background: "lightgrey", color: "black"}}>
                 <h2>Front-End Development</h2>
                 <p>I create responsive, interactive UIs with React.js, using CSS frameworks like SASS and Tailwind CSS for visually stunning and user-friendly designs.</p>
-                <button>Get Services</button>
+                <button><a href="https://www.fiverr.com/dawood098765" target='_blank'>Get Services</a></button>
             </motion.div>
         </motion.div>
       

@@ -60,4 +60,11 @@ section{
 .footer{
     text-align: center;
     margin-bottom: 5%;
+    @include mobile{
+        width: 160%;
+        text-align: center;
+    }
+    @include small-screen{
+        padding-top: 60%;
+    }
 }

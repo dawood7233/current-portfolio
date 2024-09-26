@@ -16,7 +16,7 @@ const App = () => {
     <>
       <Cursor/>
       <Arrow/>
-      <section id="HomePage">
+      <section id="Home">
       <NavBar />
         <IntroPage/>
         

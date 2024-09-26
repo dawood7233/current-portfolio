@@ -2,6 +2,7 @@
 
 .navbar {
   height: 100px;
+  margin-left: -9%;
 
   @include tablet{
     width: 180%;
@@ -54,8 +55,8 @@
       }
     }
     img {
-      height: 40%;
-      width: 11%;
+      height: 165%;
+      width: 30%;
       cursor: pointer;
       @include mobile {
         display: none;

@@ -12,7 +12,7 @@ const NavBar = () => {
       
       {/* MenuBar */}
       <div className="wrapper">
-        <img src="M.Dedited.png" alt="Logo" />
+        <img src="M.Dedicated.png" alt="Logo" />
         <div className="list">
           <ul>
             <li><a href="#HomePage" key="HomePage">Home</a></li>

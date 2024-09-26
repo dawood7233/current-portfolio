@@ -62,7 +62,7 @@ const Single = ({ item }) => {
               rel="noopener noreferrer"
               className="button"
             >
-              See Demo
+              See Code
             </a>
           </motion.div>
         </div>

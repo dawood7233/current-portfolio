@@ -23,7 +23,7 @@ const variants ={
   return (
     <motion.section className="skills" variants={variants} initial="initial" whileInView="animate">
       <h1>SKILLS</h1>
-      <div className="skills-grid">
+      <motion.div className="skills-grid" variants={variants} initial= "initial" whileInView="animate">
         <div className="row">
           <span>✓ HTML</span>
           <span>✓ CSS</span>
@@ -49,7 +49,7 @@ const variants ={
           <span>✓ PhotoShop</span>
           <span>✓ Figma</span>
         </div>
-      </div>
+      </motion.div>
     </motion.section>
   );
 };
