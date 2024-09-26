@@ -41,6 +41,9 @@
           padding-right: 50px;
           list-style: none;
           font-size: 20px;
+          &:hover{
+            color: #e1b62f;
+          }
           @include mobile {
             display: none;
           }

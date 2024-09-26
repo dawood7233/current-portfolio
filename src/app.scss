@@ -1,3 +1,8 @@
+@mixin mini-screen{
+    @media (max-width: 360px) and (max-height:740px) {
+        @content;
+    }
+}
 @mixin small-screen {
     @media (max-width: 540px) and (max-height: 720px) {
       @content;
@@ -51,4 +56,8 @@ section{
 }
 #Portfolio{
     height: 0%;      
+}
+.footer{
+    text-align: center;
+    margin-bottom: 5%;
 }
