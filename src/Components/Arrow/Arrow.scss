@@ -1,0 +1,49 @@
+@import "../../app.scss";
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+  
+    .arrow-container {
+      width: 60px;
+      height: 60px;
+      background-color: #333;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: opacity 0.3s ease-in-out;
+  
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  
+    .arrow {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  
+    @include mobile {
+      bottom: 20px;
+      right: 20px;
+      .arrow-container {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  
+    @include tablet {
+      bottom: 25px;
+      right: 25px;
+      .arrow-container {
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
+  

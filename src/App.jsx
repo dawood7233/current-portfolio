@@ -7,6 +7,7 @@ import Portfolio from "./Components/Portfolio/Portfolio";
 import Contact from "./Components/Contact/Contact";
 import Cursor from "./Components/Cursor/Cursor";
 import Skills from "./Components/Skills/Skills";
+import Arrow from "./Components/Arrow/Arrow"
 
 
 
@@ -14,6 +15,7 @@ const App = () => {
   return (
     <>
       <Cursor/>
+      <Arrow/>
       <section id="HomePage">
       <NavBar />
         <IntroPage/>

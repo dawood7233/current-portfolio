@@ -77,7 +77,7 @@ const IntroPage = () => {
             <motion.button variants={textVariants}>
               <a href="#Portfolio">See the Latest Works</a>
             </motion.button>
-            <motion.button variants={textVariants}> <a href="./DawoodResume.pdf" download="Resume">Download Resume</a></motion.button>
+            <motion.button variants={textVariants}> <a href="./DawoodResume.pdf" download="Resume" >Download Resume</a></motion.button>
           </motion.div>
           <motion.img variants={textVariants} animate= "scrollButton" src="scroll.png" alt="" />
         </motion.div>
