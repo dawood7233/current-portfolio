@@ -58,11 +58,11 @@ const IntroPage = () => {
                 <Typical
                   loop={Infinity}
                   steps={[
-                    "Ethusiastic Dev 🔴",
+                    "BS(IT) Graduate 🔴",
                     1000,
                     "Full Stack Dev 💻",
                     1000,
-                    "Mern Stack Dev 😎",
+                    "MERN Stack Dev 😎",
                     1000,
                     "Cross Platform Dev 🌐",
                     1000,
