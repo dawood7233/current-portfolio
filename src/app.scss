@@ -1,10 +1,10 @@
-@mixin mini-screen{
-    @media (max-width: 360px) and (max-height:740px) {
-        @content;
-    }
+@mixin mini-screen {
+  @media (max-width: 380px) and (max-height: 990px) {
+    @content;
+  }
 }
 @mixin small-screen {
-    @media (max-width: 540px) and (max-height: 720px) {
+    @media (max-width: 540px) and (max-height: 990px) {
       @content;
     }
   }
@@ -12,59 +12,85 @@
 // Mobile: Up to 738px
 
 @mixin mobile {
-    @media (max-width: 738px) {
-        @content;
-    }
+  @media (max-width: 738px) and (max-height: 990px) {
+    @content;
+  }
 }
 
 // Tablet: From 739px to 1024px
 @mixin tablet {
-    @media (min-width: 739px) and (max-width: 1024px) {
-        @content;
-    }
+  @media (min-width: 739px) and (max-width: 1024px) {
+    @content;
+  }
 }
 
 // Desktop: 1025px and up
 @mixin desktop {
-    @media (min-width: 1025px) {
-        @content;
-    }
+  @media (min-width: 1025px) {
+    @content;
+  }
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "DM Sans",sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
 }
-body{
-    background-color: black;
-    color: lightgray;
+body {
+  background-color: black;
+  color: lightgray;
+  @include mobile {
+  }
 }
-a{
-    text-decoration: none;
-    color: inherit;
+a {
+  text-decoration: none;
+  color: inherit;
 }
-html{
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
-section{
+section {
+  height: 100vh;
+  @include mobile {
+    height: 71vh;
+  }
+  @include small-screen{
+    height: 73vh;
+  }
+
+}
+#Home{
+  @include mini-screen{
     height: 100vh;
-    scroll-snap-align: center;
+  }
 }
-#Portfolio{
-    height: 0%;      
+#Contact {
+  @include mobile {
+    height: 100vh;
+  }
+  @include small-screen{
+    height: 140vh;
+  }
+  @include mini-screen{
+    height: 140vh;
+  }
+  
 }
-.footer{
+#Portfolio {
+  height: 0%;
+
+}
+.footer {
+  text-align: center;
+  margin-bottom: 5%;
+  @include mobile {
+    width: 100%;
     text-align: center;
-    margin-bottom: 5%;
-    @include mobile{
-        width: 160%;
-        text-align: center;
-    }
-    @include small-screen{
-        padding-top: 60%;
-    }
+  }
+  // @include small-screen{
+  //     padding-top: 60%;
+  // }
 }

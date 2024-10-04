@@ -1,10 +1,10 @@
 import React from 'react'
 import "./Services.scss"
-import {motion} from "framer-motion"
+import {easeOut, motion} from "framer-motion"
 
 const variants ={
     initial:{
-        x: -800,
+        x: -300,
         y:100,
         opacity: 0,
     },
@@ -15,13 +15,14 @@ const variants ={
         transition:{
             duration: 1,
             staggerChildren: 0.1,
+            ease: "easeOut"
         }
     }
 }
 
 const Services = () => {
   return (
-    <motion.div className='services' variants={variants} initial = "initial" whileInView= "animate">
+    <motion.div className='services' variants={variants} initial = "initial" whileInView= "animate" viewport={{ once: true, amount: 0.1 }}>
         <motion.div className="textContainer">
             <p>
             Bringing your vision to life with innovative solutions

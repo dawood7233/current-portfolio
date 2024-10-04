@@ -11,7 +11,7 @@
       width: 180%;
     }
     @include mobile {
-       width: 160%;
+       width: 100%;
        overflow: hidden;
       }
 
@@ -27,7 +27,11 @@
             font-size: 72px;
             text-align: center;
             margin-top: 30%;
+            z-index: 5;
 
+          }
+          @include small-screen{
+            z-index: 5;
           }
     }
 
@@ -60,7 +64,10 @@
             background-size: 200%;
             background-repeat: no-repeat;
             margin-top: 50%;
-
+            
+          }
+          @include small-screen{
+            z-index: 3;
           }
       
     }
@@ -72,5 +79,8 @@
         position: absolute;
         height: 100%;
         z-index: 1;
+        @include mobile{
+          
+        }
     }
 }

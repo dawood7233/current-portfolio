@@ -7,6 +7,9 @@
   @include tablet{
     width: 180%;
   }
+  @include mobile{
+    width: 80%;
+  }
 
   .sidebar-container {
     @include desktop {
@@ -22,6 +25,7 @@
   .wrapper {
     max-width: 1366px;
     margin: 15%;
+    margin-left: 21%;
     margin-top: auto;
     display: flex;
     justify-content: space-between;
@@ -31,7 +35,7 @@
     @include mobile {
       justify-content: flex-end;
       padding: 20px;
-      width: 120%;
+      width: 100%;
     }
 
     .list {
@@ -40,6 +44,7 @@
         flex-direction: row;
         li {
           padding-right: 50px;
+          margin: 2%;
           list-style: none;
           font-size: 20px;
           &:hover{
@@ -55,8 +60,8 @@
       }
     }
     img {
-      height: 165%;
-      width: 30%;
+      height: 100%;
+      width: 15%;
       cursor: pointer;
       @include mobile {
         display: none;

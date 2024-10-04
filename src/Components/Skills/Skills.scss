@@ -1,6 +1,7 @@
 @import "../../app.scss"; 
 
 .skills {
+  
   text-align: center;
   margin: 50px 0;
   color: #fff;
@@ -13,12 +14,6 @@
   width: 180%;
   height: 50vh;
 }
-  @include mobile{
-    // margin-left: 60%;
-    width: 160%;
-    margin-top: -20%;
-    height: 80vh;
-  }
   h1 {
     font-size: 2.5rem;
     font-weight: bold;

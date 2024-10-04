@@ -4,24 +4,23 @@ import {motion} from "framer-motion"
 
 const Skills = () => {
   
-const variants ={
-  initial:{
-      x: -800,
-      y:100,
+  const variants = {
+    initial: {
+      x: -300, 
       opacity: 0,
-  },
-  animate:{
+    },
+    animate: {
       x: 0,
       opacity: 1,
-      y: 0,
-      transition:{
-          duration: 1,
-          staggerChildren: 0.1,
-      }
-  }
-}
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+  
   return (
-    <motion.section className="skills" variants={variants} initial="initial" whileInView="animate">
+    <motion.section className="skills" variants={variants} initial="initial" whileInView="animate" viewport={{ once: true, amount: 0.1 }}>
       <h1>SKILLS</h1>
       <motion.div className="skills-grid" variants={variants} initial= "initial" whileInView="animate">
         <div className="row">

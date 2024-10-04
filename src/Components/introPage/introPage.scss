@@ -6,11 +6,14 @@
   position: relative;
   overflow: hidden;
 
-  @include tablet {
-    width: 180%;
+  // @include tablet {
+  //   width:
+  // }
+  @include mobile{
+    height: 60vh;
   }
-  @include mobile {
-    width: 160%;
+  @include mini-screen{
+    height: 79vh;
   }
 
   .wrapper {
@@ -44,6 +47,10 @@
         font-size: 30px;
         color: #e1b62f;
         letter-spacing: 10px;
+        
+        @include small-screen{
+          padding-top: 40px;
+        }
         @include tablet {
           font-size: 60px;
         }
@@ -78,6 +85,9 @@
       .profileDetails {
         .primary-text {
           font-size: 25px;
+          @include mobile{
+            font-size: 15px;
+          }
         }
       }
     }
@@ -96,11 +106,11 @@
       padding-left: 10%;
     }
     @include mobile {
-      height: 50%;
-      width: 100%;
+      height: 40%;
+      width: 70%;
       top: unset;
       bottom: 0;
-      padding-left: 15%;
+      padding-right: 16%;
       z-index: 3;
     }
 
@@ -124,7 +134,7 @@
       font-size: 30vh;
     }
     @include mobile {
-      font-size: 20vh;
+      font-size: 10vh;
       bottom: 10%;
       z-index: 1;
     }

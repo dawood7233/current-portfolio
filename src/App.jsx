@@ -27,7 +27,7 @@ const App = () => {
       <section id="Portfolio"><Portfolio/></section>
       <section id="skills"><Skills/></section>
       <section id="Contact"><Contact/></section>
-        <p className="footer">© 2024 M.Dawood. All Rights Reserved.</p>
+        {/* <p className="footer">© 2024 M.Dawood. All Rights Reserved.</p> */}
     </>
   );
 };

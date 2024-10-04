@@ -8,7 +8,7 @@
     justify-content: space-between;
     align-items: center; 
     @include mobile {
-      width: 160%;
+      width: 100%;
     }
     @include tablet{
       width: 180%;
@@ -24,6 +24,9 @@
         align-self: center;
         text-align: center;
         flex-direction: column;
+      }
+      @include small-screen{
+        flex: none;
       }
   
       p {
@@ -51,11 +54,12 @@
 
       @include mobile {
         width: 100%;
-        margin-top: -30%;
+        // margin-top: -30%;
+        margin-bottom: 20px;
+        overflow: hidden;
       }
       @include small-screen{
-        margin-top: 5%;
-      
+        padding-bottom: 30px;
       }
   
       .title {
@@ -67,8 +71,6 @@
           text-align: center;
           gap: 20px;
         }
-  
-  
         h1 {
           font-size: 50px;
           font-weight: 100;
@@ -94,7 +96,8 @@
       @include mobile {
         flex-direction: column;
         width: 100%;
-        margin-top: 30%;
+        margin-left: 0;
+        margin-right: 0;
       }
       .box {
         flex: 1;
@@ -117,10 +120,10 @@
           align-items: center;
           gap: 0;
           padding: 10px;
-          margin-bottom: 27%;
+          margin-bottom: 170px;
         }
         @include small-screen{
-          margin-top: -22%;
+          margin-bottom: 100px;
         }
   
         h2 {
