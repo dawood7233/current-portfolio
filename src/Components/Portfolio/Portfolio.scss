@@ -4,14 +4,11 @@
   position: relative;
 
   @include tablet{
-    width: 180%;
+    width: 100%;
   }
   @include mobile {
     width: 100%;
     overflow:hidden;
-  }
-  @include small-screen{
-    
   }
 
 
@@ -109,6 +106,9 @@
           text-align: center;
           padding-left: 40px;
           justify-content: center;
+        }
+        @include large-tablet{
+          margin-top: 25%;
         }
 
         h2 {

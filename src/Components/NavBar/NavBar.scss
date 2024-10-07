@@ -5,7 +5,7 @@
   margin-left: -9%;
 
   @include tablet{
-    width: 180%;
+    width: 100%;
   }
   @include mobile{
     width: 80%;
@@ -53,9 +53,9 @@
           @include mobile {
             display: none;
           }
-          // @include tablet{
-          //   font-size: 30px;
-          // }
+          @include tablet{
+            padding-right: 20px;
+          }
         }
       }
     }
@@ -73,6 +73,10 @@
     .social {
       display: flex;
       gap: 5vh;
+      @include tablet{
+        gap: 2vh;
+        padding-left: 30%;
+      }
       #linkedin {
         font-size: 200%;
       }

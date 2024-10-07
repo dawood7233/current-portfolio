@@ -6,14 +6,20 @@
   position: relative;
   overflow: hidden;
 
-  // @include tablet {
-  //   width:
-  // }
-  @include mobile{
-    height: 60vh;
+  @include large-tablet {
+    height: 80vh;  // Adjusting height for larger tablets
   }
-  @include mini-screen{
-    height: 79vh;
+
+  @include tablet {
+    width: 100%;  // Full width for regular tablets
+  }
+
+  @include mobile {
+    height: 60vh;  // Smaller height for mobile
+  }
+
+  @include mini-screen {
+    height: 79vh;  // Fine-tuned height for mini screens
   }
 
   .wrapper {
@@ -35,6 +41,10 @@
       gap: 20px;
       margin-left: 15%;
 
+      @include large-tablet {
+        margin-left: 5%;  
+      }
+
       @include mobile {
         height: 50%;
         width: 100%;
@@ -47,14 +57,20 @@
         font-size: 30px;
         color: #e1b62f;
         letter-spacing: 10px;
-        
-        @include small-screen{
-          padding-top: 40px;
+
+        @include small-screen {
+          padding-top: 40px;  // Adding padding for smaller screens
         }
+
         @include tablet {
-          font-size: 60px;
+          font-size: 60px;  // Larger font size for tablets
+        }
+
+        @include large-tablet {
+          font-size: 50px;  // Slightly smaller font for larger tablets
         }
       }
+
       .buttons {
         z-index: 5;
 
@@ -66,6 +82,7 @@
           color: #fff;
           margin-right: 20px;
           cursor: pointer;
+
           &:hover {
             background-color: #e1b62f;
             color: #000000;
@@ -73,6 +90,10 @@
 
           @include tablet {
             font-size: larger;
+          }
+
+          @include large-tablet {
+            font-size: 1rem;  
           }
         }
       }
@@ -85,8 +106,13 @@
       .profileDetails {
         .primary-text {
           font-size: 25px;
-          @include mobile{
-            font-size: 15px;
+
+          @include mobile {
+            font-size: 15px;  
+          }
+
+          @include large-tablet {
+            font-size: 20px;  
           }
         }
       }
@@ -105,6 +131,7 @@
       height: 100%;
       padding-left: 10%;
     }
+
     @include mobile {
       height: 40%;
       width: 70%;
@@ -118,8 +145,17 @@
       height: 100%;
       width: 100%;
       padding-right: 50px;
+
+      @include large-tablet {
+        height: 80%;  
+        width: 80%;
+        padding-right: 0;
+        margin-left: 20%;
+        margin-top: 16%;
+      }
     }
   }
+
   .slidingText {
     position: absolute;
     font-size: 50vh;
@@ -131,12 +167,18 @@
 
     @include tablet {
       z-index: 1;
-      font-size: 30vh;
+      font-size: 30vh;  // Smaller font size for tablets
     }
+
     @include mobile {
-      font-size: 10vh;
+      font-size: 10vh;  // Smaller font size for mobile
       bottom: 10%;
       z-index: 1;
+    }
+
+    @include large-tablet {
+      font-size: 35vh;  // Slightly smaller font for larger tablets
+      bottom: 5%;
     }
   }
 }

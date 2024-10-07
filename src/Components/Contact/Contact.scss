@@ -2,7 +2,6 @@
 
 .contactMain {
   height: 100%;
-  // max-width: 1366px;
   margin: 15%;
   display: flex;
   align-items: center;
@@ -11,6 +10,8 @@
   @include tablet {
     width: 100%;
     height: fit-content;
+    flex-direction: column;
+    margin: 0;
 
     margin-top: -20%;
   }
@@ -77,6 +78,9 @@
           height: 300px;
           width: 240px;
           position: relative;
+        }
+        @include tablet{
+          display: none;
         }
       }
       
