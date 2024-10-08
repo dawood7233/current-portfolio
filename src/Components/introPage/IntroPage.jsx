@@ -21,7 +21,7 @@ const textVariants = {
     y: 10,
     transition: {
       duration: 2,
-      repeat : Infinity,
+      repeat: Infinity,
     },
   },
 };
@@ -77,12 +77,29 @@ const IntroPage = () => {
             <motion.button variants={textVariants}>
               <a href="#Portfolio">See the Latest Works</a>
             </motion.button>
-            <motion.button variants={textVariants}> <a href="./DawoodResume.pdf" download="Resume" >Download Resume</a></motion.button>
+            <motion.button variants={textVariants}>
+              {" "}
+              <a href="./MDawoodResume.pdf" download="Resume">
+                Download Resume
+              </a>
+            </motion.button>
           </motion.div>
-          <motion.img variants={textVariants} animate= "scrollButton" src="scroll.png" alt="" />
+          <motion.img
+            variants={textVariants}
+            animate="scrollButton"
+            src="scroll.png"
+            alt=""
+          />
         </motion.div>
       </div>
-      <motion.div variants={sliderVariants} initial= "initial" animate="animate"className="slidingText">Web Developer Designer</motion.div>
+      <motion.div
+        variants={sliderVariants}
+        initial="initial"
+        animate="animate"
+        className="slidingText"
+      >
+        Web Developer Designer
+      </motion.div>
       <div className="img-container">
         <img src="MyPhoto.png" alt="" />
       </div>
