@@ -10,7 +10,7 @@
   @include tablet {
     width: 100%;
     height: fit-content;
-    flex-direction: column;
+    gap: 0;
     margin: 0;
 
     margin-top: -20%;
@@ -34,6 +34,9 @@
     // @include mini-screen {
     //   margin-top: 10%;
     // }
+    @include tablet{
+      margin-left: 5%;
+    }
 
     h1 {
       font-size: 60px;
@@ -58,15 +61,9 @@
     position: relative;
 
     @include tablet {
-      margin-top: 0;
+      margin-right: 3%;
     }
-    @include mobile {
-      // padding: 50px;
 
-    }
-    // @include small-screen {
-    //   margin-top: auto;
-    // }
 
     .phoneSvg {
       stroke: #e1b62f;
@@ -80,7 +77,9 @@
           position: relative;
         }
         @include tablet{
-          display: none;
+          height: 360px;
+          width: 300px;
+
         }
       }
       

@@ -54,6 +54,7 @@
         @include mobile {
             background-size: contain;
             background-repeat: no-repeat;
+            z-index: 5;
           }
       
     }

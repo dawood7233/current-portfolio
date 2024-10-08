@@ -1,5 +1,5 @@
 @mixin mini-screen {
-  @media (max-width: 380px) and (max-height: 990px) {
+  @media  (max-width: 380px) and (max-height: 990px) {
     @content;
   }
 }
@@ -19,12 +19,12 @@
 
 // Tablet: From 739px to 1024px
 @mixin tablet {
-  @media (min-width: 739px) and (max-width: 1024px) {
+  @media (min-width: 739px) and (max-width: 1023px) {
     @content;
   }
 }
 @mixin large-tablet {
-  @media (min-width: 739px) and (max-width: 1024px) and (max-height: 1368px) {
+  @media  (min-width: 1024px) and (max-height: 1368px) {
     @content;
   }
 }
@@ -65,14 +65,16 @@ section {
   @include small-screen {
     height: 73vh;
   }
+  @include tablet{
+    height:70vh;
+  }
+
 }
 #Home {
   @include mini-screen {
     height: 100vh;
   }
-  @include large-tablet{
-    height: 80vh;
-  }
+
 }
 #Contact {
   @include mobile {
@@ -83,6 +85,9 @@ section {
   }
   @include mini-screen {
     height: 140vh;
+  }
+  @include tablet{
+    height: 120vh;
   }
 }
 #Portfolio {
